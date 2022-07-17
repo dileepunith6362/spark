@@ -6,7 +6,7 @@ pipeline {
         stage('Git checkout') {
            steps {
                echo 'This is git checkout stage'
-                                      git 'https://github.com/dileepunith6362/spark.git'
+                                      git 'https://github.com/dileepunith6362/simple-java-project.git'
                   }
          }
         stage('Build stage') {
@@ -24,7 +24,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 echo 'This is deploy stage'
-                              sh 'sudo cp /home/ec2-user/jenkins-slave1/workspace/tomcat-test/target/*.war /opt/apache-tomcat-9.0.64/webapps/'
+                              sh 'sudo cp /home/ec2-user/jenkins-slave1/workspace/jenkinsfilejob/target/*.war /opt/apache-tomcat-9.0.64/webapps/'
                   }
              }     
      }
