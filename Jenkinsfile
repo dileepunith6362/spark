@@ -5,7 +5,7 @@ pipeline {
            stages { 
                stage('git checkout') {
                    steps {
-                   git branch: 'main', url: 'https://github.com/manu5525/spark.git'
+                   git branch: 'main', url: 'https://github.com/dileepunith6362/spark.git'
                 }
             }
                stage('build') {
